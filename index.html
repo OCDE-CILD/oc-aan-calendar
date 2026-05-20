@@ -87,17 +87,6 @@
       text-align: center;
     }
 
-    .helper-title {
-      margin-bottom: 6px;
-      font-weight: bold;
-      color: #374151;
-    }
-
-    .helper-list {
-      display: inline-block;
-      text-align: left;
-    }
-
     .notice {
       margin-top: 28px;
       padding: 18px;
@@ -128,7 +117,7 @@
 
     .section {
       margin-top: 22px;
-      padding: 18px;
+      padding: 22px;
       background: #f9fafb;
       border-radius: 10px;
       text-align: left;
@@ -138,20 +127,28 @@
     .section-title {
       font-weight: bold;
       color: #003b7a;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       text-align: center;
+      font-size: 20px;
     }
 
-    .section-copy {
-      font-size: 13px;
+    .steps {
+      font-size: 14px;
       color: #4b5563;
-      line-height: 1.6;
-      text-align: center;
-      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .steps ol {
+      margin: 10px 0 0 22px;
+      padding: 0;
+    }
+
+    .steps li {
+      margin-bottom: 6px;
     }
 
     .url-box {
-      margin-top: 12px;
+      margin-top: 16px;
       padding: 12px 14px;
       border: 1px solid #d1d5db;
       border-radius: 8px;
@@ -162,21 +159,13 @@
       word-break: break-all;
     }
 
-    .outlook-steps {
-      font-size: 13px;
-      color: #4b5563;
-      line-height: 1.6;
+    .platform-note {
       margin-top: 10px;
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.6;
     }
 
-    .outlook-steps ol {
-      margin: 8px 0 0 18px;
-      padding: 0;
-    }
-
-    .outlook-steps li {
-      margin-bottom: 4px;
-    }
   </style>
 </head>
 
@@ -201,82 +190,80 @@
     </a>
 
     <div class="helper-text">
-      <div class="helper-title">
-        For Apple Calendar, iPhone, iPad, and some mobile calendar apps.
-      </div>
+      For Apple Calendar, iPhone, iPad, and some mobile calendar apps.
     </div>
 
     <div class="section">
-      <div class="section-title">Google Calendar</div>
-    
-      <div class="outlook-steps">
-        To add automatic OC-AAN updates to Google Calendar:
+
+      <div class="section-title">
+        Google Calendar
+      </div>
+
+      <div class="steps">
+        To receive automatic OC-AAN calendar updates in Google Calendar:
         <ol>
-          <li>Click “Copy Google URL” below</li>
-          <li>Open Google Calendar on a computer</li>
+          <li>Click <strong>Copy Google URL</strong> below</li>
+          <li>Open <strong>Google Calendar</strong> on a computer</li>
           <li>On the left side, click the <strong>+</strong> next to “Other calendars”</li>
           <li>Select <strong>From URL</strong></li>
-          <li>Paste the copied URL and click <strong>Add calendar</strong></li>
+          <li>Paste the copied URL</li>
+          <li>Click <strong>Add calendar</strong></li>
         </ol>
-    
-        Note: Google Calendar subscriptions must be added from a computer browser,
-        not the mobile app.
+
+        <div class="platform-note">
+          Note: Google Calendar subscriptions must be added from a computer browser,
+          not the mobile app.
+        </div>
       </div>
-    
+
       <div class="url-box" id="google-url">
         https://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics
       </div>
-    
+
       <button class="button copy-button"
               type="button"
               onclick="copyUrl('google-url', this)">
         Copy Google URL
       </button>
+
     </div>
 
     <div class="section">
-      <div class="section-title">Outlook on the web / New Outlook</div>
-      <div class="outlook-steps">
-        Paste the calendar URL below into <strong>Calendar &gt; Add calendar &gt; Subscribe from web</strong>
-        and include the full <strong>https://</strong> address.
+
+      <div class="section-title">
+        Outlook
+      </div>
+
+      <div class="steps">
+        To receive automatic OC-AAN calendar updates in Outlook:
         <ol>
-          <li>Copy the URL</li>
-          <li>Open Outlook on the web or New Outlook</li>
-          <li>Choose <strong>Subscribe from web</strong></li>
-          <li>Paste the full URL and save</li>
+          <li>Click <strong>Copy Outlook URL</strong> below</li>
+          <li>Open <strong>Outlook Calendar</strong></li>
+          <li>Select:
+            <ul>
+              <li><strong>Subscribe from web</strong> (New Outlook / Outlook on the web)</li>
+              <li><strong>From Internet</strong> (Outlook Classic)</li>
+            </ul>
+          </li>
+          <li>Paste the copied URL, including <strong>https://</strong></li>
+          <li>Save / Subscribe</li>
         </ol>
+
+        <div class="platform-note">
+          For the best experience, use New Outlook or Outlook on the web.
+        </div>
       </div>
 
       <div class="url-box" id="outlook-url">
         https://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics
       </div>
 
-      <button class="button copy-button" type="button" onclick="copyUrl('outlook-url', this)">
+      <button class="button copy-button"
+              type="button"
+              onclick="copyUrl('outlook-url', this)">
         Copy Outlook URL
       </button>
-    </div>
 
-    <div class="section">
-      <div class="section-title">Outlook Classic</div>
-      <div class="outlook-steps">
-        Outlook Classic may not open this feed from the prompt dialog.
-        For the best experience, use Outlook on the web or New Outlook.
-        If you need Outlook Classic, follow these steps:
-        <ol>
-          <li>Open Outlook Classic</li>
-          <li>Go to Calendar &gt; Add Calendar &gt; From Internet</li>
-          <li>Paste the full URL below, including <strong>https://</strong></li>
-          <li>Save / Subscribe</li>
-        </ol>
-      </div>
-
-      <div class="url-box" id="classic-url">
-        https://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics
-      </div>
-
-      <button class="button copy-button" type="button" onclick="copyUrl('classic-url', this)">
-        Copy Outlook URL
-      </button>
     </div>
 
     <a class="button secondary-button"
@@ -304,11 +291,14 @@
 
       try {
         await navigator.clipboard.writeText(url);
+
         const originalText = button.textContent;
         button.textContent = "Copied!";
+
         setTimeout(() => {
           button.textContent = originalText;
         }, 1500);
+
       } catch (error) {
         window.prompt("Copy this calendar URL:", url);
       }
