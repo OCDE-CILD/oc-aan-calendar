@@ -42,13 +42,41 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      background: #003b7a;
-      color: white;
       transition: 0.2s;
     }
 
-    .button:hover {
+    .primary-button {
+      background: #003b7a;
+      color: white;
+    }
+
+    .primary-button:hover {
       background: #0050a6;
+    }
+
+    .secondary-button {
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    .secondary-button:hover {
+      background: #d1d5db;
+    }
+
+    .notice {
+      margin-top: 28px;
+      padding: 18px;
+      background: #f9fafb;
+      border-left: 4px solid #003b7a;
+      border-radius: 8px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .notice strong {
+      color: #003b7a;
     }
 
     .small {
@@ -56,15 +84,22 @@
       font-size: 14px;
       color: #6b7280;
     }
+
+    .logo {
+      max-width: 320px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 
 <body>
-<div class="container">
+
+  <div class="container">
 
     <img src="OC-AAN Logo.png"
          alt="OC-AAN Logo"
-         style="max-width: 320px; width: 100%; margin-bottom: 20px;" />
+         class="logo" />
 
     <h1>OC-AAN Calendar</h1>
 
@@ -73,20 +108,29 @@
       Orange County Assessment & Accountability Network meetings.
     </p>
 
-    <a class="button"
+    <a class="button primary-button"
        href="webcal://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics">
        Subscribe to Calendar
     </a>
 
-    <a class="button"
+    <a class="button secondary-button"
        href="./oc-aan.ics">
-       Download ICS File
+       Download Static ICS File
     </a>
+
+    <div class="notice">
+      <strong>Recommended:</strong> Use “Subscribe to Calendar” to receive
+      automatic meeting updates, schedule changes, and revised event details.
+      <br /><br />
+      The “Download Static ICS File” option creates a one-time copy of the
+      calendar and will not update automatically.
+    </div>
 
     <p class="small">
       Compatible with Outlook, Google Calendar, Apple Calendar, and mobile devices.
     </p>
 
   </div>
+
 </body>
 </html>
