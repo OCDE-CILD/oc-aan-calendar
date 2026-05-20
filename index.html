@@ -142,20 +142,12 @@
       text-align: center;
     }
 
-    .classic-steps {
+    .section-copy {
       font-size: 13px;
       color: #4b5563;
       line-height: 1.6;
-      margin-top: 10px;
-    }
-
-    .classic-steps ol {
-      margin: 8px 0 0 18px;
-      padding: 0;
-    }
-
-    .classic-steps li {
-      margin-bottom: 4px;
+      text-align: center;
+      margin-bottom: 10px;
     }
 
     .url-box {
@@ -168,6 +160,22 @@
       font-size: 13px;
       color: #111827;
       word-break: break-all;
+    }
+
+    .outlook-steps {
+      font-size: 13px;
+      color: #4b5563;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .outlook-steps ol {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+
+    .outlook-steps li {
+      margin-bottom: 4px;
     }
   </style>
 </head>
@@ -189,31 +197,41 @@
 
     <a class="button primary-button"
        href="webcal://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics">
-       Add Live Calendar
+       Open in Apple / Mobile Calendar
     </a>
 
     <div class="helper-text">
       <div class="helper-title">
-        When prompted, choose your calendar option:
-      </div>
-
-      <div class="helper-list">
-        • Outlook (new) or Outlook on the web<br />
-        • Chrome for Google Calendar<br />
-        • Apple Calendar on iPhone/iPad/Mac
+        For Apple Calendar, iPhone, iPad, and some mobile calendar apps.
       </div>
     </div>
 
     <div class="section">
-      <div class="section-title">Outlook Classic</div>
-      <div class="classic-steps">
-        Outlook Classic may not open this feed from the prompt dialog. For the best experience,
-        use Outlook (new) or Outlook on the web. If you need Outlook Classic, follow these steps:
+      <div class="section-title">Google Calendar</div>
+      <div class="section-copy">
+        Use a computer web browser to add this calendar by URL.
+        Google Calendar subscriptions are not available from the mobile app.
+      </div>
+
+      <div class="url-box" id="google-url">
+        https://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics
+      </div>
+
+      <button class="button copy-button" type="button" onclick="copyUrl('google-url', this)">
+        Copy Google URL
+      </button>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Outlook on the web / New Outlook</div>
+      <div class="outlook-steps">
+        Paste the calendar URL below into <strong>Calendar &gt; Add calendar &gt; Subscribe from web</strong>
+        and include the full <strong>https://</strong> address.
         <ol>
-          <li>Open Outlook Classic</li>
-          <li>Go to Calendar &gt; Add Calendar &gt; From Internet</li>
-          <li>Paste the full URL below, including https://</li>
-          <li>Save / Subscribe</li>
+          <li>Copy the URL</li>
+          <li>Open Outlook on the web or New Outlook</li>
+          <li>Choose <strong>Subscribe from web</strong></li>
+          <li>Paste the full URL and save</li>
         </ol>
       </div>
 
@@ -221,7 +239,30 @@
         https://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics
       </div>
 
-      <button class="button copy-button" type="button" onclick="copyOutlookUrl()">
+      <button class="button copy-button" type="button" onclick="copyUrl('outlook-url', this)">
+        Copy Outlook URL
+      </button>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Outlook Classic</div>
+      <div class="outlook-steps">
+        Outlook Classic may not open this feed from the prompt dialog.
+        For the best experience, use Outlook on the web or New Outlook.
+        If you need Outlook Classic, follow these steps:
+        <ol>
+          <li>Open Outlook Classic</li>
+          <li>Go to Calendar &gt; Add Calendar &gt; From Internet</li>
+          <li>Paste the full URL below, including <strong>https://</strong></li>
+          <li>Save / Subscribe</li>
+        </ol>
+      </div>
+
+      <div class="url-box" id="classic-url">
+        https://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics
+      </div>
+
+      <button class="button copy-button" type="button" onclick="copyUrl('classic-url', this)">
         Copy Outlook URL
       </button>
     </div>
@@ -232,7 +273,7 @@
     </a>
 
     <div class="notice">
-      <strong>Recommended:</strong> Use the live calendar option to receive automatic
+      <strong>Recommended:</strong> Use the live calendar options above to receive automatic
       meeting updates, schedule changes, and revised event details.
       <br /><br />
       The “Download Static ICS File” option creates a one-time copy of the calendar and
@@ -246,9 +287,8 @@
   </div>
 
   <script>
-    async function copyOutlookUrl() {
-      const url = "https://ocde-cild.github.io/oc-aan-calendar/oc-aan.ics";
-      const button = document.querySelector(".copy-button");
+    async function copyUrl(elementId, button) {
+      const url = document.getElementById(elementId).textContent.trim();
 
       try {
         await navigator.clipboard.writeText(url);
