@@ -147,6 +147,11 @@
       margin-bottom: 6px;
     }
 
+    .steps ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
     .url-box {
       margin-top: 16px;
       padding: 12px 14px;
@@ -165,7 +170,6 @@
       color: #6b7280;
       line-height: 1.6;
     }
-
   </style>
 </head>
 
@@ -194,10 +198,7 @@
     </div>
 
     <div class="section">
-
-      <div class="section-title">
-        Google Calendar
-      </div>
+      <div class="section-title">Google Calendar</div>
 
       <div class="steps">
         To receive automatic OC-AAN calendar updates in Google Calendar:
@@ -225,24 +226,20 @@
               onclick="copyUrl('google-url', this)">
         Copy Google URL
       </button>
-
     </div>
 
     <div class="section">
-
-      <div class="section-title">
-        Outlook
-      </div>
+      <div class="section-title">Outlook</div>
 
       <div class="steps">
         To receive automatic OC-AAN calendar updates in Outlook:
         <ol>
           <li>Click <strong>Copy Outlook URL</strong> below</li>
-          <li>Open <strong>Outlook Calendar</strong></li>
-          <li>Select:
+          <li>Open <strong>Outlook</strong></li>
+          <li>Select one of these options:
             <ul>
-              <li><strong>Subscribe from web</strong> (New Outlook / Outlook on the web)</li>
-              <li><strong>From Internet</strong> (Outlook Classic)</li>
+              <li><strong>Subscribe from web</strong> in Outlook on the web or New Outlook</li>
+              <li><strong>From Internet</strong> in Outlook Classic</li>
             </ul>
           </li>
           <li>Paste the copied URL, including <strong>https://</strong></li>
@@ -250,7 +247,8 @@
         </ol>
 
         <div class="platform-note">
-          For the best experience, use New Outlook or Outlook on the web.
+          Recommended: add the feed in Outlook on the web or New Outlook first.
+          If you also use Outlook Classic with the same account, the subscription should appear there after Outlook syncs.
         </div>
       </div>
 
@@ -263,7 +261,6 @@
               onclick="copyUrl('outlook-url', this)">
         Copy Outlook URL
       </button>
-
     </div>
 
     <a class="button secondary-button"
@@ -291,14 +288,11 @@
 
       try {
         await navigator.clipboard.writeText(url);
-
         const originalText = button.textContent;
         button.textContent = "Copied!";
-
         setTimeout(() => {
           button.textContent = originalText;
         }, 1500);
-
       } catch (error) {
         window.prompt("Copy this calendar URL:", url);
       }
