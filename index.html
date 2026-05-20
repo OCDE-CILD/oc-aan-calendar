@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OC-AAN Calendar</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #003b7a;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .button {
+      display: block;
+      margin: 16px auto;
+      padding: 14px 20px;
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      background: #003b7a;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #0050a6;
+    }
+
+    .small {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>OC-AAN Calendar</h1>
+
+    <p>
+      Subscribe to receive automatic updates for all
+      Orange County Assessment & Accountability Network meetings.
+    </p>
+
+    <a class="button"
+       href="webcal://oc-aan.github.io/oc-aan-calendar/oc-aan.ics">
+       Subscribe to Calendar
+    </a>
+
+    <a class="button"
+       href="./oc-aan.ics">
+       Download ICS File
+    </a>
+
+    <p class="small">
+      Compatible with Outlook, Google Calendar, Apple Calendar, and mobile devices.
+    </p>
+
+  </div>
+</body>
+</html>
