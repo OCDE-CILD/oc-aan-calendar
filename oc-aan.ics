@@ -1,0 +1,88 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//OpenAI//OC-AAN 2026-27//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:OC-AAN 2026-27
+X-WR-TIMEZONE:America/Los_Angeles
+
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:ocaan-20260929@example.com
+SEQUENCE:0
+DTSTAMP:20260520T120000Z
+DTSTART;TZID=America/Los_Angeles:20260929T083000
+DTEND;TZID=America/Los_Angeles:20260929T100000
+SUMMARY:OC-AAN Meeting
+LOCATION:https://ocde.zoom.us/j/87527519147
+DESCRIPTION:OC-AAN | Orange County Assessment & Accountability Network\n\nJoin Zoom Meeting: https://ocde.zoom.us/j/87527519147\nMeeting Resources: https://bit.ly/cild-ocann\n\nOC-AAN Provides:\n- Timely State & Regional Updates\n- Peer Learning & Collaboration\n- Assessment & Accountability News\n- Supportive Tools & Resources\n\nAll meetings are virtual.
+URL:https://ocde.zoom.us/j/87527519147
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ocaan-20261208@example.com
+SEQUENCE:0
+DTSTAMP:20260520T120000Z
+DTSTART;TZID=America/Los_Angeles:20261208T083000
+DTEND;TZID=America/Los_Angeles:20261208T100000
+SUMMARY:OC-AAN Meeting
+LOCATION:https://ocde.zoom.us/j/87527519147
+DESCRIPTION:OC-AAN | Orange County Assessment & Accountability Network\n\nJoin Zoom Meeting: https://ocde.zoom.us/j/87527519147\nMeeting Resources: https://bit.ly/cild-ocann\n\nOC-AAN Provides:\n- Timely State & Regional Updates\n- Peer Learning & Collaboration\n- Assessment & Accountability News\n- Supportive Tools & Resources\n\nAll meetings are virtual.
+URL:https://ocde.zoom.us/j/87527519147
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ocaan-20270126@example.com
+SEQUENCE:0
+DTSTAMP:20260520T120000Z
+DTSTART;TZID=America/Los_Angeles:20270126T083000
+DTEND;TZID=America/Los_Angeles:20270126T100000
+SUMMARY:OC-AAN Meeting
+LOCATION:https://ocde.zoom.us/j/87527519147
+DESCRIPTION:OC-AAN | Orange County Assessment & Accountability Network\n\nJoin Zoom Meeting: https://ocde.zoom.us/j/87527519147\nMeeting Resources: https://bit.ly/cild-ocann\n\nOC-AAN Provides:\n- Timely State & Regional Updates\n- Peer Learning & Collaboration\n- Assessment & Accountability News\n- Supportive Tools & Resources\n\nAll meetings are virtual.
+URL:https://ocde.zoom.us/j/87527519147
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ocaan-20270323@example.com
+SEQUENCE:0
+DTSTAMP:20260520T120000Z
+DTSTART;TZID=America/Los_Angeles:20270323T083000
+DTEND;TZID=America/Los_Angeles:20270323T100000
+SUMMARY:OC-AAN Meeting
+LOCATION:https://ocde.zoom.us/j/87527519147
+DESCRIPTION:OC-AAN | Orange County Assessment & Accountability Network\n\nJoin Zoom Meeting: https://ocde.zoom.us/j/87527519147\nMeeting Resources: https://bit.ly/cild-ocann\n\nOC-AAN Provides:\n- Timely State & Regional Updates\n- Peer Learning & Collaboration\n- Assessment & Accountability News\n- Supportive Tools & Resources\n\nAll meetings are virtual.
+URL:https://ocde.zoom.us/j/87527519147
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ocaan-20270525@example.com
+SEQUENCE:0
+DTSTAMP:20260520T120000Z
+DTSTART;TZID=America/Los_Angeles:20270525T083000
+DTEND;TZID=America/Los_Angeles:20270525T100000
+SUMMARY:OC-AAN Meeting
+LOCATION:https://ocde.zoom.us/j/87527519147
+DESCRIPTION:OC-AAN | Orange County Assessment & Accountability Network\n\nJoin Zoom Meeting: https://ocde.zoom.us/j/87527519147\nMeeting Resources: https://bit.ly/cild-ocann\n\nOC-AAN Provides:\n- Timely State & Regional Updates\n- Peer Learning & Collaboration\n- Assessment & Accountability News\n- Supportive Tools & Resources\n\nAll meetings are virtual.
+URL:https://ocde.zoom.us/j/87527519147
+END:VEVENT
+
+END:VCALENDAR
